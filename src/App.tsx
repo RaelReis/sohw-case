@@ -1,6 +1,4 @@
 import "./App.css";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import { ArrowsCounterClockwise, Check } from "@phosphor-icons/react";
 
 export type JsonData = Data[];
@@ -2933,71 +2931,6 @@ const data = [
 ];
 
 function App() {
-  const [jsonData, setJsonData] = useState<JsonData>([]);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       // const response = await axios.get("http://localhost:3000/data");
-  //       const response = await axios.get<{ data: JsonData }>("../data.json");
-  //       // setJsonData(response.data);
-  //       setJsonData(
-  //         response.data.data
-  //           .filter((data) => data.validated)
-  //           .filter(
-  //             (data) =>
-  //               data.outputCode
-  //                 .replace("<strong>", "")
-  //                 .replace("<p>", "")
-  //                 .replace("</strong>", "")
-  //                 .replace("</p>", "")
-  //                 .split(" ")
-  //                 .map((word) => word.replace(/[\s\S]*?(#\w+)/g, "$1"))
-  //                 .filter((word) => word.startsWith("#")).length !== 0
-  //           )
-  //       );
-  //     } catch (error) {
-  //       console.error("Erro ao carregar o arquivo JSON:", error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, []);
-
-  // async function handleValidation(toChangeData: Data) {
-  //   const response = await axios.put(
-  //     `http://localhost:3000/data/${toChangeData.id}`,
-  //     { ...toChangeData, validated: true }
-  //   );
-
-  //   setJsonData((prevState) =>
-  //     prevState.map((data) => {
-  //       if (data.id === toChangeData.id) {
-  //         return response.data;
-  //       }
-  //       return data;
-  //     })
-  //   );
-  //   console.log(response.data);
-  // }
-
-  // async function handleRemake(toRemakeData: Data) {
-  //   const response = await axios.put(
-  //     `http://localhost:3000/data/${toRemakeData.id}`,
-  //     { ...toRemakeData, remake: true }
-  //   );
-
-  //   setJsonData((prevState) =>
-  //     prevState.map((data) => {
-  //       if (data.id === toRemakeData.id) {
-  //         return response.data;
-  //       }
-  //       return data;
-  //     })
-  //   );
-  //   console.log(response.data);
-  // }
-
   return (
     <>
       <div>
