@@ -1,0 +1,115 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.mx-6 {
+  margin: 32px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction:column;
+  align-items: flex-start;
+
+  text-align: start;
+
+  background: #414141;
+  padding: 24px 32px;
+  border-radius: 12px;
+}
+
+.product-info-wrapper {
+  margin-top: 24px;
+  padding: 24px 32px;
+  background-color: rgb(37, 37, 37);
+  border-radius: 12px;
+}
+.product-info-wrapper span{
+  font-weight: 800;
+}
+
+.header-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.validated {
+  text-decoration: line-through;
+  opacity: .2;
+  cursor: default;
+}
+
+.remake {
+  text-decoration: line-through;
+  background-color: rgb(82, 26, 26);
+  opacity: .2;
+  cursor: default;
+}
+
+.tags-wrapper {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.tag {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: rgb(53, 53, 53);
+}
+
+.action-warpper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.action-warpper button{
+  padding: 6px;
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+
+  transition: all .3s ease;
+}
+
+.action-warpper button:hover{
+  filter:brightness(1.2);
+
+}
+
+.action-warpper > :nth-child(1) {
+  background-color: rgb(41, 41, 41);
+}
+
+.action-warpper > :nth-child(2) {
+  background-color: rgb(28, 61, 34);
+}
+
+.float {
+  position: sticky;
+  top: 24px;
+
+  padding: 12px 24px;
+  border-radius: 6px;
+
+  width: 30px;
+  height: 30px;
+  background-color: rgb(28, 61, 34);
+}
+
+.float + .float {
+  margin-left: 24px;
+  background-color: rgb(82, 26, 26);
+}
